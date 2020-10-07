@@ -23,7 +23,7 @@ pipeline {
                 nodejs(nodeJSInstallationName: "Node") {
                     withEnv(["PATH+PULUMI=C:/ProgramData/chocolatey/lib/pulumi/tools/Pulumi/bin"]) {
                         bat "pulumi stack select ${PULUMI_STACK}"
-                        //bat "pulumi destroy --yes"
+                        bat "pulumi destroy --yes"
                     }
                 }
             }
