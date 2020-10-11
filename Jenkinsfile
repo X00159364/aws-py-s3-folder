@@ -34,9 +34,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            step([$class: 'InfluxDbPublisher', customData: null, customDataMap: null, customPrefix: null, target: 'TestDB'])
-        }
-    }
 }
