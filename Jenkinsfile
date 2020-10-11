@@ -34,11 +34,11 @@ pipeline {
         //     }
         // }
     }
-    // post {
-    //     always {
-    //         influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
-    //     }
-    // }    
+    post {
+        always {
+            influxDbPublisher(selectedTarget: 'TestDB')
+        }
+    }    
 }
 
 def assignURL(build_url) {
