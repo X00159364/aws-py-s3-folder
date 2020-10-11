@@ -36,7 +36,7 @@ pipeline {
     }
     post {
         always {
-            influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
+            step([$class: 'InfluxDbPublisher', customData: null, customDataMap: null, customPrefix: null, target: 'TestDB'])
         }
     }
 }
