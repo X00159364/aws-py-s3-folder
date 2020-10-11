@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    environment {
+        BUILD_URL = "${BUILD_URL}"
+    }
     
     stages {
        
