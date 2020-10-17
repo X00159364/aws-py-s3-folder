@@ -34,11 +34,11 @@ pipeline {
             }
         }
     }
-    // post {
-    //     always {
-    //         influxDbPublisher(selectedTarget: 'TestDB')
-    //     }
-    // }    
+    post {
+        always {
+            influxDbPublisher(selectedTarget: 'JenkinsDB')
+        }
+    }    
 }
 
 def assignURL(build_url) {
