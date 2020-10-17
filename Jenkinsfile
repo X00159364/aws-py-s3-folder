@@ -44,9 +44,7 @@ pipeline {
             always {
                 influxDbPublisher(selectedTarget: 'JenkinsDB')
             }
-        }    
-    }
-
+    }    
 }
 
 def assignURL(build_url) {
