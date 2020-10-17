@@ -42,7 +42,7 @@ pipeline {
         //     currentBuild.result = 'SUCCESS'
         // }            
         always {
-            influxDbPublisher(selectedTarget: 'JenkinsDB')
+            influxDbPublisher(selectedTarget: 'JenkinsDB', customData: assignURL(BUILD_URL))
         }
     }    
 }
