@@ -38,7 +38,7 @@ pipeline {
             failure{
                 currentBuild.result = 'FAILURE'
             }
-            sucess{
+            success{
                 currentBuild.result = 'SUCCESS'
             }            
             always {
