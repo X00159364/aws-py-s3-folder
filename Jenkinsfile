@@ -35,15 +35,15 @@ pipeline {
         }
     }
     post {
-            failure{
-                currentBuild.result = 'FAILURE'
-            }
-            success{
-                currentBuild.result = 'SUCCESS'
-            }            
-            always {
-                influxDbPublisher(selectedTarget: 'JenkinsDB')
-            }
+        // failure{
+        //     currentBuild.result = 'FAILURE'
+        // }
+        // success{
+        //     currentBuild.result = 'SUCCESS'
+        // }            
+        always {
+            influxDbPublisher(selectedTarget: 'JenkinsDB')
+        }
     }    
 }
 
